@@ -5,7 +5,7 @@ import { type Prisma } from '@prisma/client';
 
 @Injectable()
 
-export class UserRepository {
+export class UsersRepository {
     constructor(private readonly prismaService: PrismaService) {}
 
     create(createDto: Prisma.UserCreateArgs) {

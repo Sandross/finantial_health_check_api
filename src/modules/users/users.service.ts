@@ -2,10 +2,10 @@ import { PrismaService } from 'src/shared/database/prisma.service';
 import { ConflictException, Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { hash } from 'bcryptjs';
-import { UserRepository } from 'src/shared/database/repositories/user.repositories';
+import { UsersRepository } from 'src/shared/database/repositories/users.repositories'; 
 @Injectable()
 export class UsersService {
-    constructor(private readonly userRepo: UserRepository) {
+    constructor(private readonly userRepo: UsersRepository) {
 
     }
     async create(createUserDto: CreateUserDto) {
