@@ -10,7 +10,7 @@ export class AuthService {
         private readonly usersRepo: UsersRepository,
         private readonly jwtService: JwtService
     ) {}
-    async authenticate(signinDto: SigninDto) {
+    async signin(signinDto: SigninDto) {
         const { email, password } = signinDto;
 
         const user = await this.usersRepo.findUnique({
