@@ -7,7 +7,6 @@ import { type Prisma } from '@prisma/client';
 
 export class UsersRepository {
     constructor(private readonly prismaService: PrismaService) {}
-
     create(createDto: Prisma.UserCreateArgs) {
         return this.prismaService.user.create(createDto)
     }
